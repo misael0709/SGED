@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SGED</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el header:', error));
+    </script>
+    <main>
+        <section id="instrucciones" class="contenedor instrucciones">
+            <h2 class="titulo">Instrucciones</h2>
+            <div class="contenedor-instrucciones">
+                <div class="contenido">
+                    <h3><span>1</span>Darse de alta</h3>
+                    <p>En el botón "login" ubicado en la esquina superior izquierda el alumno deberá registrarse para poder realizar la encuesta</p>
+                    <h3><span>2</span>Acceder a la encuesta</h3>
+                    <p>Una vez registrado, el alumno deberá dirigirse al apartado "Evaluación" ubicado en la esquina superior izquierda para comenzar con la evaluación docente</p>
+                    <h3><span>3</span>Realizar la encuesta</h3>
+                    <p>El alumno deberá contestar las preguntas que se le presenten en base a sus maestros de manera objetiva y sincera</p>
+                    <h3><span>4</span>Enviar evaluación</h3>
+                    <p>Una vez finalizada la evaluación, al final del formulario aparecerá un botón con la leyenda "Enviar Evaluación", donde al presionarlo ésta se almacenará y se enviará a las autoridades correspondientes</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el header:', error));
+    </script>
+</body>
+</html>

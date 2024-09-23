@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="cont">
+            <div class="logo">
+                <img src="https://cenidet.tecnm.mx/cenidet/image/pleca_cenidet.jpg" alt="">
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#instrucciones">Instrucciones</a></li>
+                    <li><a href="#">Evaluación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('show');
+    }
+</script>
+</html>

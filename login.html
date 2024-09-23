@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form_style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el header:', error));
+    </script>
+    <div class="login">
+        <form className="space-y-4">
+            <div>
+              <Label htmlFor="usuario">Usuario</Label>
+              <Input id="usuario" type="text" placeholder="Introduce tu matricula" />
+            </div>
+            <div>
+              <Label htmlFor="contrasena">Contraseña</Label>
+              <Input id="contrasena" type="password" placeholder="Introduce tu contraseña" />
+            </div>
+            <Button type="submit">Acceder</Button>
+          </form>
+          <p>¿Aún no estas registrado? 
+            <button>Registrarse</button>
+          </p>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el header:', error));
+    </script>
+</body>
+</html>
